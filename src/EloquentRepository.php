@@ -5,7 +5,7 @@ namespace Nos\BaseRepository;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Nos\CRUD\Interfaces\Repositories\EloquentRepositoryInterface;
+use Nos\BaseRepository\Interfaces\EloquentRepositoryInterface;
 
 abstract class EloquentRepository implements EloquentRepositoryInterface
 {
