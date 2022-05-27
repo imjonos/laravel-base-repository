@@ -1,0 +1,42 @@
+{
+    "name": "imjonos/laravel-base-repository",
+    "description": "Laravel base repository",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eugeny Nosenko",
+            "email": "info@toprogram.ru",
+            "homepage": "https://toprogram.ru"
+        }
+    ],
+    "homepage": "https://github.com/imjonos/laravel-base-repository",
+    "keywords": [
+        "Laravel",
+        "Repository"
+    ],
+    "require": {
+        "illuminate/support": "~8",
+        "doctrine/dbal": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nos\\BaseRepository\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+            ]
+        }
+    }
+}
