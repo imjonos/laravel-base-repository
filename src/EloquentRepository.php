@@ -33,17 +33,17 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
 
     public function update(int $id, array $data): bool
     {
-        return $this->getModel()->find($id)->update($data);
+        return $this->getModel()->findOrFail($id)->update($data);
     }
 
     public function find(int $id): ?Model
     {
-        return $this->getModel()->find($id);
+        return $this->getModel()->findOrFail($id);
     }
 
     public function delete(int $id): bool
     {
-        return $this->getModel()->find($id)->delete();
+        return $this->getModel()->findOrFail($id)->delete();
     }
 
     public function query(): ?Builder
