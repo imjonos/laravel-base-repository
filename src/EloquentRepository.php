@@ -35,6 +35,11 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
     {
         return $this->getModel()->findOrFail($id)->update($data);
     }
+    
+    public function exists(int $id): bool
+    {
+        return $this->getModel()->whereId($id)->exists();
+    }
 
     public function find(int $id): ?Model
     {
