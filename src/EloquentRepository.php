@@ -26,6 +26,11 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
         return $this->model;
     }
 
+    public function count(): int
+    {
+        return $this->getModel()->count();
+    }
+
     public function create(array $data): ?Model
     {
         return $this->getModel()->create($data);
@@ -35,7 +40,7 @@ abstract class EloquentRepository implements EloquentRepositoryInterface
     {
         return $this->getModel()->findOrFail($id)->update($data);
     }
-    
+
     public function exists(int $id): bool
     {
         return $this->getModel()->whereId($id)->exists();
