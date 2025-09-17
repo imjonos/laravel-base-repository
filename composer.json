@@ -15,7 +15,7 @@
         "Repository"
     ],
     "require": {
-        "illuminate/support": "~5|~6|~7|~8|~9|~10",
+        "illuminate/support": "~5|~6|~7|~8|~9|~10|~11|~12",
         "doctrine/dbal": "*"
     },
     "autoload": {
