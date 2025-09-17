@@ -118,13 +118,13 @@ You can easily mock the repository interface in your tests, which helps keep you
 
 ---
 
-## Contributing
+## 🚀 Contributing
 
 Please see [contributing.md](contributing.md) for details and a todolist.
 
 ---
 
-## License
+## 📝 License
 
 This package is open-sourced software licensed under the MIT license.
 Please see the [license file](license.md) for more information.
