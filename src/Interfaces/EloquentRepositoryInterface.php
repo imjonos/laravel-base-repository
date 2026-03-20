@@ -9,18 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 interface EloquentRepositoryInterface
 {
     public function find(int $id): ?Model;
-
     public function count(): int;
-
     public function all(): Collection;
-
     public function query(): ?Builder;
-
     public function create(array $data): ?Model;
-
     public function update(int $id, array $data): bool;
-
     public function exists(int $id): bool;
-
     public function delete(int $id): bool;
+    public function insert(array $data): bool;
+    public function upsert(array $values, array|string $uniqueBy, ?array $update = null): int;
 }
