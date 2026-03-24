@@ -33,7 +33,7 @@ interface EloquentRepositoryInterface
     public function delete(int $id): bool;
 
     /**
-     * Insert multiple records
+     * Insert multiple records. Do not support events and scout autoupdate
      *
      * @param array $data Array of data to insert
      * @return bool Whether the insertion was successful
