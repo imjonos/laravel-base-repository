@@ -41,6 +41,8 @@ class OrderRepository extends EloquentRepository
 }
 ```
 
+> **Note:** If you use Laravel Scout with the `Searchable` trait on your model, the repository will automatically keep the search index in sync.
+
 ### 2. Use the Repository in a Controller or Service
 
 Inject the repository and use its methods:
@@ -85,22 +87,28 @@ class OrderController extends Controller
 | `create(array $data)` | Create a new record |
 | `update(int $id, array $data)` | Update a record by ID |
 | `exists(int $id)` | Check if a record exists |
-| `find(int $id)` | Find a record by ID (throws exception if not found) |
+| `find(int $id)` | Find a record by ID (returns null if not found) |
 | `delete(int $id)` | Delete a record by ID |
 | `query()` | Return a query builder instance for custom queries |
+| `insert(array $data)` | Insert multiple records (no events, no scout) |
+| `upsert(array $values, array|string $uniqueBy, ?array $update)` | Update or insert multiple records |
+
+### 🔍 Laravel Scout Support
+
+The repository automatically handles Laravel Scout indexing when using the `Searchable` trait:
+- After `upsert()`: Makes records searchable
+- After `update()`: Updates search index
+- After `delete()`: Removes from search index
 
 ---
 
 ## 🌐 Project Structure
 
 ```
-vendor/
-└── imjonos/
-    └── laravel-base-repository/
-        ├── src/
-        │   └── EloquentRepository.php
-        └── interfaces/
-            └── EloquentRepositoryInterface.php
+src/
+├── EloquentRepository.php
+└── Interfaces/
+    └── EloquentRepositoryInterface.php
 ```
 
 ---
@@ -108,7 +116,7 @@ vendor/
 ## 📦 Requirements
 
 - PHP 8.0+
-- Laravel 9+
+- Laravel 5.0+ - 13.x
 
 ---
 
