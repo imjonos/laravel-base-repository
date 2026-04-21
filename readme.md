@@ -80,18 +80,18 @@ class OrderController extends Controller
 
 ## 🔧 Available Methods
 
-| Method | Description |
-|--------|-------------|
-| `all()` | Get all records |
-| `count()` | Count all records |
-| `create(array $data)` | Create a new record |
-| `update(int $id, array $data)` | Update a record by ID |
-| `exists(int $id)` | Check if a record exists |
-| `find(int $id)` | Find a record by ID (returns null if not found) |
-| `delete(int $id)` | Delete a record by ID |
-| `query()` | Return a query builder instance for custom queries |
-| `insert(array $data)` | Insert multiple records (no events, no scout) |
-| `upsert(array $values, array|string $uniqueBy, ?array $update)` | Update or insert multiple records |
+| Method                                                            | Description                                        |
+|-------------------------------------------------------------------|----------------------------------------------------|
+| `all()`                                                           | Get all records                                    |
+| `count()`                                                         | Count all records                                  |
+| `create(array $data)`                                             | Create a new record                                |
+| `update(int $id, array $data)`                                    | Update a record by ID                              |
+| `exists(int $id)`                                                 | Check if a record exists                           |
+| `find(int $id)`                                                   | Find a record by ID (returns null if not found)    |
+| `delete(int $id)`                                                 | Delete a record by ID                              |
+| `query()`                                                         | Return a query builder instance for custom queries |
+| `insert(array $data)`                                             | Insert multiple records (no events, no scout)      |
+| `upsert(array $values, array\| string $uniqueBy, ?array $update)` | Update or insert multiple records |
 
 ### 🔍 Laravel Scout Support
 
